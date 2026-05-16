@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WakeWise — Support</title>
+<style>
+  :root{ --ink:#0f1226; --indigo:#4f46e5; --bg:#f7f7fc; --muted:#5b5e74; --line:#e2e1ec; }
+  *{box-sizing:border-box} html,body{margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:720px;margin:0 auto;padding:48px 24px 96px}
+  .crumb{color:var(--muted);font-size:14px;margin-bottom:16px}
+  .crumb a{color:var(--muted);text-decoration:none}
+  .crumb a:hover{color:var(--indigo)}
+  h1{font-size:32px;margin:0 0 4px;letter-spacing:-0.5px}
+  .sub{color:var(--muted);font-size:16px;margin:0 0 32px}
+  h2{font-size:20px;margin:32px 0 8px}
+  p, ul{margin:0 0 14px}
+  ul{padding-left:22px}
+  a{color:var(--indigo)}
+  .contact{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;margin:24px 0;text-align:center}
+  .contact .email{font-size:20px;font-weight:600;display:inline-block;margin-top:6px}
+  .faq dt{font-weight:600;margin-top:16px}
+  .faq dd{margin:4px 0 14px;color:var(--ink)}
+  footer{margin-top:64px;color:var(--muted);font-size:14px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="crumb"><a href="/">Apps</a> · <a href="/wakewise/">WakeWise</a> · Support</p>
+  <h1>Support</h1>
+  <p class="sub">Help, bug reports, feature ideas — we read everything.</p>
+
+  <div class="contact">
+    <div>Email support:</div>
+    <div class="email"><a href="mailto:goloio32@gmail.com">goloio32@gmail.com</a></div>
+    <div style="color:var(--muted);font-size:14px;margin-top:8px">We aim to reply within 2 business days.</div>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <dl class="faq">
+    <dt>What does WakeWise do that the iPhone Clock app doesn't?</dt>
+    <dd>The Clock app fires exactly at the time you set, no matter what stage of sleep you're in — that's why some mornings feel brutal. WakeWise watches your heart rate and motion through Apple Watch and fires up to 30 minutes earlier, but <em>only</em> when you're in light sleep. Same wake-up time ceiling, far gentler exit.</dd>
+
+    <dt>Do I have to tap "Start tracking" before bed?</dt>
+    <dd>No. WakeWise auto-starts sleep tracking whenever an enabled alarm is within the next 10 hours. Just wear your Watch and go to sleep.</dd>
+
+    <dt>Does WakeWise need internet?</dt>
+    <dd>No. The app works entirely offline. Nothing is sent to any server.</dd>
+
+    <dt>Does it require an Apple Watch?</dt>
+    <dd>Yes — the smart-wake feature reads heart rate and motion from your Apple Watch. Without a Watch the iPhone app still fires the alarm at the ceiling time (like a regular alarm) but the "wake at the light-sleep moment" magic is Watch-only.</dd>
+
+    <dt>What happens if I'm in deep sleep when the window opens?</dt>
+    <dd>WakeWise waits. If you don't reach light sleep before the ceiling time, the alarm fires at the ceiling time. You will never oversleep.</dd>
+
+    <dt>How is sleep stage detected?</dt>
+    <dd>Two signals: heart rate (drops in deep sleep, variable in REM) and wrist motion (still in deep, twitchy in REM, large in awake). The combined signal classifies you into Awake / Light / Deep every 30 seconds. Heart rate access uses Apple HealthKit; you can revoke it any time.</dd>
+
+    <dt>Does the alarm bypass Do Not Disturb / Sleep / Focus modes?</dt>
+    <dd>WakeWise notifications are flagged as time-sensitive, which bypasses Focus modes automatically. iOS Critical Alerts (which bypass DND silenced ringer) require an extra Apple entitlement that we're applying for — it will arrive in a free update.</dd>
+
+    <dt>Can I add alarms from the Apple Watch?</dt>
+    <dd>Yes. The Watch shows the same alarm list as the iPhone — add, edit, toggle, delete from either device and the change syncs both ways.</dd>
+
+    <dt>Is there a subscription?</dt>
+    <dd>No subscription, ever. WakeWise is a one-time purchase on the App Store. Every future update is free.</dd>
+
+    <dt>Where is my data?</dt>
+    <dd>On your iPhone and Apple Watch only. Heart rate, sleep stage, alarm history — none of it leaves your devices. We don't operate any servers. See the <a href="/wakewise/privacy.html">privacy policy</a> for details.</dd>
+  </dl>
+
+  <footer>WakeWise · © 2026 Taoufik Jabbari · <a href="/wakewise/" style="color:var(--indigo)">← back to WakeWise</a></footer>
+</div>
+</body>
+</html>
