@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StayFit — Programme partagé</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         background:#070A09; color:#F2F5F4; display:flex; min-height:100vh; align-items:center; justify-content:center; }
+  .card { text-align:center; padding:40px 28px; max-width:420px; }
+  .logo { font-size:44px; font-weight:800; letter-spacing:-1px; }
+  .logo .s { color:#F2F5F4; } .logo .f { color:#22E3CE; }
+  h1 { font-size:20px; margin:18px 0 8px; }
+  p  { font-size:14px; color:#9BA8A4; line-height:1.5; margin:0 0 26px; }
+  a.btn { display:block; background:#22E3CE; color:#07141B; font-weight:700; font-size:16px;
+          padding:15px 18px; border-radius:999px; text-decoration:none; margin-bottom:12px; }
+  a.ghost { display:block; color:#22E3CE; font-weight:600; font-size:14px; padding:12px; text-decoration:none; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="logo"><span class="s">Stay</span><span class="f">Fit</span></div>
+  <h1>Un programme d'entraînement a été partagé avec toi</h1>
+  <p>Ouvre ce lien sur ton téléphone avec l'application StayFit installée pour récupérer le programme.<br>
+     <span style="font-size:12px">A workout program was shared with you — open this link on your phone with StayFit installed.</span></p>
+  <a class="btn" id="open" href="#">Ouvrir dans StayFit</a>
+  <a class="ghost" href="https://testflight.apple.com/" id="get">Je n'ai pas encore l'app</a>
+</div>
+<script>
+  // The share id rides in the hash so this static page needs zero server config.
+  var id = (location.hash || "").replace(/^#/, "");
+  var deep = "stayfit://share/" + id;
+  document.getElementById("open").setAttribute("href", deep);
+  // Best effort auto-open when the app is installed (user still has the button).
+  if (id) { setTimeout(function () { window.location.href = deep; }, 350); }
+</script>
+</body>
+</html>
