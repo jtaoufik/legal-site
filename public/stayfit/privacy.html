@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StayFit — Privacy Policy</title>
+<style>
+  :root{ --ink:#eaf6f3; --mint:#2fe3b3; --mintHot:#7cf5d3; --bg:#06100e; --bg2:#0c1c19; --muted:#9fb3ad; --line:#1d332e; }
+  *{box-sizing:border-box} html,body{margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+       background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%);
+       color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;min-height:100vh}
+  .wrap{max-width:720px;margin:0 auto;padding:48px 24px 96px}
+  .crumb{color:var(--muted);font-size:14px;margin-bottom:16px}
+  .crumb a{color:var(--muted);text-decoration:none}
+  .crumb a:hover{color:var(--mint)}
+  h1{font-size:32px;margin:0 0 4px;letter-spacing:-0.5px;background:linear-gradient(90deg,var(--mintHot),var(--mint));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .updated{color:var(--muted);font-size:14px;margin:0 0 32px}
+  h2{font-size:20px;margin:32px 0 8px}
+  p, ul{margin:0 0 14px}
+  ul{padding-left:22px}
+  a{color:var(--mint)}
+  .callout{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:24px 0}
+  table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+  th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+  th{color:var(--mint);font-weight:600}
+  footer{margin-top:64px;color:var(--muted);font-size:14px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="crumb"><a href="/">Apps</a> · <a href="/stayfit/">StayFit</a> · Privacy</p>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Effective August 1, 2026</p>
+
+  <p>StayFit (the "App") is a calorie and training tracker published by Taoufik Jabbari ("we", "us"). StayFit shows your day as a budget: your basal burn funds it, food spends it, steps and workouts earn it back. This policy explains what data the App handles, why, and the choices you have.</p>
+
+  <div class="callout">
+    <strong>Quick summary:</strong> You can use StayFit without an account. If you sign in, your profile, food and training log sync to your private area of our database so you can change device. Progress photos never leave your phone. There are no ads, no advertising identifier, and no tracking across other apps or websites. You can delete your account and everything in it from inside the App.
+  </div>
+
+  <h2>1. Using StayFit without an account</h2>
+  <p>The App can be used in guest mode. In that mode your profile, food log, workouts and history are stored only on your device and are removed when you uninstall. Nothing is written to our database, and no account exists to delete.</p>
+
+  <h2>2. Information the App handles when you sign in</h2>
+  <p>Signing in uses <strong>Sign in with Apple</strong> or <strong>Google Sign-In</strong>. We never see or store your password. Apple's Hide My Email is supported and works normally.</p>
+  <table>
+    <tr><th>Data</th><th>Why</th><th>Where it lives</th></tr>
+    <tr><td>Account identifier, display name, email (if the provider shares one)</td><td>Sign you in, keep your data attached to you, address you by name</td><td>Firebase Authentication / Cloud Firestore (Google Cloud, EU &amp; US regions)</td></tr>
+    <tr><td>Profile: height, weight, age, biological sex, activity level, goal, experience, training focus</td><td>Compute your basal metabolism, calorie budget and macro targets</td><td>Cloud Firestore, under your account</td></tr>
+    <tr><td>Food log (foods, portions, calories, macros, meal, day)</td><td>Show your daily balance and history</td><td>Your device, and Cloud Firestore under your account</td></tr>
+    <tr><td>Training log (programmes, sessions, sets, weights, durations)</td><td>Track your workouts and progression</td><td>Your device, and Cloud Firestore under your account</td></tr>
+    <tr><td>Body weight and measurements you enter</td><td>Draw your progress charts</td><td>Your device, and Cloud Firestore under your account</td></tr>
+    <tr><td>Subscription status (Free / Premium)</td><td>Unlock Premium features on your devices</td><td>Cloud Firestore, under your account</td></tr>
+  </table>
+
+  <h2>3. Social features (optional)</h2>
+  <p>If you add friends, share a programme or appear on the leaderboard, a limited profile — your display name, handle, avatar initial and training summary (sessions, tonnage, records, achievements, recent activity) — becomes visible to the people you are connected with, and your ranking position becomes visible to other users of the leaderboard. Your food log, your weight, your measurements and your photos are <strong>never</strong> shared. Social features are optional; if you never add a friend, nothing about you is shown to anyone.</p>
+
+  <h2>4. Progress photos stay on your device</h2>
+  <p>Progress photos are written to the App's private storage on your phone. They are not uploaded, not backed up to our servers, and no one else can see them. Deleting the App deletes them. If you export an evolution video, the video is rendered on your device and you choose where it goes.</p>
+
+  <h2>5. Health data</h2>
+  <p>With your explicit permission, StayFit reads steps, active energy and workouts from Apple Health (iOS) or Health Connect (Android) to credit the calories you burned. This data is used on your device to compute your balance; the resulting totals (calories, steps) sync with your account, and the underlying health records are not sold, shared with third parties, or used for advertising. You can revoke the permission at any time in your system settings. StayFit never writes to Apple Health.</p>
+
+  <h2>6. AI food logging</h2>
+  <p>When you describe a meal in words or take a photo of it, that text or image is sent to <strong>Google's Gemini API</strong> to estimate the foods, calories and macros, and the result is returned to the App. Send only what you are comfortable sharing — the photo should be of your food. We do not use these submissions to train models, and we do not keep a copy beyond what is needed to return the estimate. The barcode scanner and food search query the public <a href="https://world.openfoodfacts.org">Open Food Facts</a> database, which receives only the barcode or the search words.</p>
+
+  <h2>7. Notifications</h2>
+  <p>If you allow notifications, StayFit sends training reminders, meal reminders and (if you use the social features) alerts when a friend interacts with you. These are delivered through Apple Push Notification service / Firebase Cloud Messaging, which requires storing a device token. Turn them off any time in the App or in your system settings.</p>
+
+  <h2>8. Analytics and crash data</h2>
+  <p>StayFit uses Firebase Analytics to count anonymous, aggregated usage events (screens opened, features used) so we can see what is worth improving, together with the standard crash reports Apple and Google provide. These are tied to an app-instance identifier, not to your name or email, and are never used for advertising.</p>
+
+  <h2>9. What we do NOT do</h2>
+  <ul>
+    <li>No ads: the App contains no advertising SDK, no IDFA, and no App Tracking Transparency prompt.</li>
+    <li>No tracking of you across other apps or websites, and no data brokers.</li>
+    <li>We do not sell or rent your data to anyone.</li>
+    <li>We never receive your card number: purchases are handled entirely by Apple or Google.</li>
+  </ul>
+
+  <h2>10. Purchases</h2>
+  <p>StayFit Premium is an optional auto-renewing subscription (monthly or yearly, with a free trial), billed by Apple through the App Store or by Google through Google Play. Payment, renewal and cancellation are handled by the store; manage or cancel it in your Apple Account or Google Play subscription settings. We only store whether your account is Free or Premium.</p>
+
+  <h2>11. Data retention and deletion</h2>
+  <p>Your data is kept while your account exists. <strong>Profile → Delete my account</strong> erases your account and the data attached to it (profile, logs, social profile, friendships) from our database; local data goes when you delete the App. You can also write to <a href="mailto:taoufik.leon.jabbari@gmail.com">taoufik.leon.jabbari@gmail.com</a> and we will delete it for you.</p>
+
+  <h2>12. Your rights</h2>
+  <p>If you are in the EU/EEA or the UK, you may request access, correction, export or erasure of your personal data, and you may object to processing. The legal basis is your consent (health data, notifications, AI features) and the performance of our agreement with you (running the App). Write to <a href="mailto:taoufik.leon.jabbari@gmail.com">taoufik.leon.jabbari@gmail.com</a>; we answer within 30 days.</p>
+
+  <h2>13. Children's privacy</h2>
+  <p>StayFit is not intended for children under 13, and we do not knowingly collect their data. If you believe a child has provided personal information, email <a href="mailto:taoufik.leon.jabbari@gmail.com">taoufik.leon.jabbari@gmail.com</a> and we will remove it.</p>
+
+  <h2>14. Service providers</h2>
+  <p>We rely on Google Firebase (authentication, database, messaging, analytics), Google Gemini (AI food estimates), Open Food Facts (public food database), and Apple / Google for payments and crash reports. Each processes data only to provide those functions.</p>
+
+  <h2>15. Changes to this policy</h2>
+  <p>We may update this Policy. The "Effective" date above changes when we do, and material changes are announced in the App.</p>
+
+  <h2>16. Contact</h2>
+  <p>Questions or requests: <a href="mailto:taoufik.leon.jabbari@gmail.com">taoufik.leon.jabbari@gmail.com</a>.</p>
+
+  <footer><p>© 2026 Taoufik Jabbari · <a href="/stayfit/support">Support</a></p></footer>
+</div>
+</body>
+</html>
