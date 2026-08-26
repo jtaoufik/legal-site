@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nine: Sudoku Puzzle - Support</title>
+<style>
+  :root{ --ink:#1C2333; --leaf:#B45309; --accent:#0EA5E9; --bg:#FBF8F3; --muted:#6B7280; --line:#E7E1D6; }
+  *{box-sizing:border-box} html,body{margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:720px;margin:0 auto;padding:48px 24px 96px}
+  .crumb{color:var(--muted);font-size:14px;margin-bottom:16px}
+  .crumb a{color:var(--muted);text-decoration:none}
+  .crumb a:hover{color:var(--leaf)}
+  h1{font-size:32px;margin:0 0 4px;letter-spacing:-0.5px}
+  .sub{color:var(--muted);font-size:16px;margin:0 0 32px}
+  h2{font-size:20px;margin:32px 0 8px}
+  p, ul{margin:0 0 14px}
+  ul{padding-left:22px}
+  a{color:var(--leaf)}
+  .contact{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;margin:24px 0;text-align:center}
+  .contact .email{font-size:20px;font-weight:600;display:inline-block;margin-top:6px}
+  .faq dt{font-weight:600;margin-top:16px}
+  .faq dd{margin:4px 0 14px;color:var(--ink)}
+  footer{margin-top:64px;color:var(--muted);font-size:14px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="crumb"><a href="/">Apps</a> · <a href="/nine/">Nine</a> · Support</p>
+  <h1>Support</h1>
+  <p class="sub">Help, bug reports, feature ideas. We read everything.</p>
+
+  <div class="contact">
+    <div>Email support:</div>
+    <div class="email"><a href="mailto:taoufik.leon.jabbari@gmail.com">taoufik.leon.jabbari@gmail.com</a></div>
+    <div style="color:var(--muted);font-size:14px;margin-top:8px">We aim to reply within 2 business days.</div>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <dl class="faq">
+    <dt>How do I play?</dt>
+    <dd>Tap an empty square, then tap a digit to place it. The square's row, column and block light up so you can see what is already taken. The small number under each digit on the pad tells you how many of that digit are still to place.</dd>
+
+    <dt>What is the daily sudoku?</dt>
+    <dd>One grid a day, and it is the same grid for every player in the world. That is what makes the world ladder mean something: everyone solved the identical puzzle, so the times are comparable. It resets at midnight UTC.</dd>
+
+    <dt>How are the difficulties decided?</dt>
+    <dd>By the technique the grid actually demands, not by how many squares are blank. Easy needs nothing past a naked single; Evil will not be handed to you without an X-Wing. That is why an Evil grid can take a few seconds longer to generate: the app throws away grids that do not earn the name.</dd>
+
+    <dt>What do hints do to my time?</dt>
+    <dd>Each hint adds 30 seconds to the time recorded for your personal best and for the world ladder. The clock on screen keeps showing your real time, and the win screen shows the penalty and the adjusted time separately, so nothing is hidden. A solve with no hints is never affected.</dd>
+
+    <dt>What does a hint tell me?</dt>
+    <dd>It fills the next square you could have worked out, and names the technique that proves it: naked single, hidden pair, pointing pair, X-Wing. The point is to show you the reasoning, not just the number.</dd>
+
+    <dt>I lost my progress</dt>
+    <dd>Nine saves your current grid, your records and your streak locally on your device. Reinstalling the app clears that local save. You can carry your progress to a new phone with Export in Settings, then Import on the new device.</dd>
+
+    <dt>How does the world ladder work?</dt>
+    <dd>Solve the daily sudoku and your time is posted with your chosen name and your country flag. There is no account and no sign-in: your device generates its own anonymous id on first launch. We never ask for your real name or your email.</dd>
+
+    <dt>Can I hide the timer, or turn off the duplicate highlighting?</dt>
+    <dd>Yes, both are switches in Settings. The timer keeps running for the ladder, it simply stops being shown.</dd>
+
+    <dt>Can I remove the ads?</dt>
+    <dd>Ads keep Nine free. There is no paid ad-removal option today. If you want one, email us: demand drives the roadmap.</dd>
+
+    <dt>The app crashed, or a square will not accept a digit</dt>
+    <dd>Please email <a href="mailto:taoufik.leon.jabbari@gmail.com">taoufik.leon.jabbari@gmail.com</a> with your iOS or Android version, your device model, and what you were doing right before it happened. A screenshot helps a lot.</dd>
+
+    <dt>How is my data used?</dt>
+    <dd>See the <a href="/nine/privacy">Privacy Policy</a> for the full answer. Short version: your grids and records live on your device, the daily ladder row is an anonymous name plus a country and a time, and AdMob shows the ads.</dd>
+
+    <dt>Where can I leave a review?</dt>
+    <dd>If Nine gives you a good quiet twenty minutes, a store review is the kindest thing you can do. It takes 30 seconds and genuinely helps the game find more players.</dd>
+  </dl>
+
+  <footer>Nine: Sudoku Puzzle · © 2026 Taoufik Jabbari · <a href="/nine/" style="color:var(--leaf)">← back to Nine</a></footer>
+</div>
+</body>
+</html>
