@@ -28,45 +28,59 @@
 <div class="wrap">
   <p class="crumb"><a href="/">Apps</a> · <a href="/forge/">Forge</a> · Privacy</p>
   <h1>Privacy Policy</h1>
-  <p class="updated">Effective June 6, 2026</p>
+  <p class="updated">Last updated September 4, 2026</p>
 
-  <p>Forge (the "App") is a screen-time wellness app published by Taoufik Jabbari ("we", "us"). Forge lets you earn unlock time for distracting apps by doing push-ups, squats, or walking steps. This policy explains what data the App handles, how it is used, and your choices.</p>
+  <p>Forge (the "App") is a screen-time wellness app published by Taoufik Jabbari ("we", "us"). Forge lets you earn unlock time for distracting apps by doing push-ups, squats, or walking steps. This policy explains what data the App handles, who we share it with, and your choices.</p>
 
   <div class="callout">
-    <strong>Quick summary:</strong> Forge keeps your data on your device. The camera is used only on-device to count your reps and is never recorded, uploaded, or stored. There are no ads and no tracking across other apps. Forge offers one optional Pro purchase, handled by Apple.
+    <strong>Quick summary:</strong> Forge counts your reps on-device and never records or uploads camera video. It stores an anonymous score on a global leaderboard through Google Firestore, uses Google Firebase Analytics and Crashlytics, and shows ads through Google AdMob (with your consent choice in the EU/UK and your App Tracking Transparency choice on iOS). Forge offers one optional Pro purchase through the App Store or Google Play.
   </div>
 
   <h2>1. Information the App handles</h2>
   <ul>
-    <li><strong>On-device settings &amp; activity:</strong> the apps you choose to gate, your schedule and effort formulas, your push-up / squat / step counts, and your unlock history. This is stored locally on your device (iOS UserDefaults) and is removed when you uninstall.</li>
-    <li><strong>Camera (on-device only):</strong> to count reps, Forge uses Apple's on-device Vision framework to read your body pose through the front camera. Camera frames stay in memory, are analyzed on the spot, and are discarded immediately. No video or image is ever recorded, uploaded, or stored, and nothing from the camera leaves your device.</li>
-    <li><strong>Motion &amp; Fitness:</strong> for Steps mode, Forge reads your step count from the iOS pedometer on your device to credit walked steps. It is not transmitted off the device.</li>
-    <li><strong>Screen Time (Family Controls):</strong> the apps you choose to gate are managed on your device by Apple's Screen Time framework. Forge never receives, sees, or transmits the list of apps you select.</li>
-    <li><strong>Crash and diagnostic data:</strong> standard iOS / App Store crash reports may be shared with us by Apple, anonymized and aggregated.</li>
+    <li><strong>On-device settings &amp; activity:</strong> the apps you choose to gate, your schedule and effort formulas, your push-up / squat / step counts, and your unlock history. Stored locally on your device and removed when you uninstall.</li>
+    <li><strong>Camera (on-device only):</strong> to count reps, Forge uses on-device pose detection (Apple's Vision framework on iOS) to read your body position through the front camera. Camera frames stay in memory, are analyzed on the spot, and are discarded immediately. No video or image is ever recorded, uploaded, or stored, and nothing from the camera leaves your device.</li>
+    <li><strong>Motion &amp; Fitness:</strong> for Steps mode, Forge reads your step count from the device's step counter/pedometer to credit walked steps. It is not transmitted off the device.</li>
+    <li><strong>App gating (Screen Time / Accessibility):</strong> on iOS the apps you choose to gate are managed on your device by Apple's Screen Time / Family Controls framework; Forge never receives, sees, or transmits the list of apps you select. On Android, Forge uses an Accessibility Service only to detect when a gated app comes to the foreground and to show the "earn time" screen. It does not read, log, or transmit the content of other apps, and this data never leaves your device.</li>
+    <li><strong>Leaderboard data (anonymous):</strong> an anonymous identifier generated on first launch, together with your display name/handle, country, and your workout counts and scores, is sent to Google Firestore so the global leaderboard can rank you. This is not tied to your name, email, or any account.</li>
+    <li><strong>Usage analytics:</strong> Google Firebase Analytics records standard, anonymized usage events (screens opened, sessions started, workout mode used) so we can understand how the App is used.</li>
+    <li><strong>Crash and diagnostic data:</strong> Google Firebase Crashlytics collects crash reports (device model, OS version, and the state of the App at the moment of a crash) so we can find and fix bugs. These reports contain no personal information.</li>
+    <li><strong>Advertising identifiers:</strong> Google AdMob shows banner and interstitial ads. On iOS, AdMob may use your device's advertising identifier (IDFA) to show personalized ads only if you allow tracking through the App Tracking Transparency prompt; if you decline, AdMob shows only non-personalized ads. In the EU/UK/EEA, a consent form (Google's User Messaging Platform) asks for your choice before any personalized ad is requested. On Android, AdMob may use your device's advertising ID under the same consent rules.</li>
+    <li><strong>Purchases:</strong> Forge offers a single optional "Pro" purchase, processed by Apple through the App Store (StoreKit) or by Google through Google Play Billing, depending on your device. Apple or Google handles the payment; we never receive your card number or payment details. Your purchase entitlement is restored across your devices by Apple or Google.</li>
   </ul>
 
   <h2>2. Information we do NOT collect</h2>
   <ul>
     <li>We do not ask for your real name, email, phone number, or photos.</li>
-    <li>We do not access your contacts, calendar, microphone, or precise location.</li>
-    <li>We do not show ads — no advertising identifiers (IDFA), no App Tracking Transparency prompt, and no tracking across other apps or websites.</li>
-    <li>We do not keep a cloud copy of your data, and we do not sell or rent any data to third parties.</li>
+    <li>We do not access your contacts, calendar, or microphone.</li>
+    <li>We do not record, upload, or store camera video or images.</li>
+    <li>We do not read, log, or transmit the content or usage of other apps on your device.</li>
+    <li>We do not sell or rent any data to third parties.</li>
   </ul>
 
-  <h2>3. Purchases</h2>
-  <p>Forge offers a single optional one-time "Pro" purchase, processed by Apple through the App Store using StoreKit. Apple handles the payment; we never receive your card number or payment details. Your purchase entitlement is restored by Apple across your devices signed in to the same Apple Account.</p>
+  <h2>3. How third parties use data</h2>
+  <ul>
+    <li><strong>Google Firebase (Analytics, Crashlytics, Firestore):</strong> anonymized usage analytics, crash reporting, and the anonymous leaderboard. See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase's privacy notice</a>.</li>
+    <li><strong>Google AdMob:</strong> serves banner and interstitial ads within the App and may collect advertising identifiers, subject to your consent and tracking choices below. See <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google's Ads Privacy</a> and <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob data practices</a>.</li>
+    <li><strong>Apple App Store / Google Play:</strong> processes the optional Pro purchase. See <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's privacy policy</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a>.</li>
+  </ul>
 
-  <h2>4. How third parties are involved</h2>
-  <p>Forge relies on Apple system services only: the App Store / StoreKit (purchases), the Screen Time / Family Controls framework (app gating, on device), and Apple's crash reporting. No data is shared with advertisers, and the App contains no third-party advertising or analytics SDKs.</p>
+  <h2>4. Ad consent and tracking choices</h2>
+  <p>In the EU, UK, and EEA, Forge shows a consent form before requesting personalized ads. On iOS, the App Tracking Transparency prompt governs whether AdMob may use your advertising identifier:</p>
+  <ul>
+    <li><strong>Allow:</strong> AdMob may serve personalized ads based on your activity in other apps.</li>
+    <li><strong>Ask App Not To Track:</strong> AdMob serves only non-personalized ads. The App stays fully usable either way.</li>
+  </ul>
+  <p>You can change your choice at any time: on iOS, in Settings &gt; Privacy &amp; Security &gt; Tracking; on Android, in Settings &gt; Privacy &gt; Ads. You can also manage AdMob's use of your data directly through Google at <a href="https://myadcenter.google.com" target="_blank" rel="noopener">myadcenter.google.com</a>. Purchasing Pro removes all ads.</p>
 
   <h2>5. Children's privacy</h2>
-  <p>Forge is rated 4+ and suitable for all audiences. We do not knowingly collect personal information from children. Nothing that identifies you leaves your device. If you believe a child has provided identifiable information, please email <a href="mailto:taoufik.leon.jabbari@gmail.com">taoufik.leon.jabbari@gmail.com</a> and we will address it.</p>
+  <p>Forge is rated 4+ and suitable for all audiences. We do not knowingly collect personal information from children. If you believe a child has provided identifiable information, please email <a href="mailto:taoufik.leon.jabbari@gmail.com">taoufik.leon.jabbari@gmail.com</a> and we will address it.</p>
 
   <h2>6. Data retention and deletion</h2>
-  <p>All Forge data lives on your device. To remove everything, delete the App — there is no cloud copy to erase. Questions about your data: <a href="mailto:taoufik.leon.jabbari@gmail.com">taoufik.leon.jabbari@gmail.com</a>.</p>
+  <p>On-device data (settings, schedule, local history) is removed when you uninstall the App. Leaderboard, analytics, and crash data are retained only as long as needed to operate the leaderboard and improve the App, and are tied to an anonymous identifier rather than your identity. To delete your leaderboard entry and any data associated with your anonymous identifier, email <a href="mailto:taoufik.leon.jabbari@gmail.com">taoufik.leon.jabbari@gmail.com</a> with the display name shown in the App's Settings, and we will delete it within 30 days.</p>
 
   <h2>7. Changes to this policy</h2>
-  <p>We may update this Policy. The "Effective" date above will change when we do. Material changes will be reflected in an updated App Store release.</p>
+  <p>We may update this Policy. The "Last updated" date above will change when we do. Material changes will be reflected in an updated App Store / Play Store release.</p>
 
   <h2>8. Contact</h2>
   <p>Questions or requests: <a href="mailto:taoufik.leon.jabbari@gmail.com">taoufik.leon.jabbari@gmail.com</a>.</p>

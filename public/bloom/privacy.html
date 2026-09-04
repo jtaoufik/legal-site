@@ -26,12 +26,12 @@
 <div class="wrap">
   <p class="crumb"><a href="/">Apps</a> · <a href="/bloom/">Bloom</a> · Privacy</p>
   <h1>Privacy Policy</h1>
-  <p class="updated">Effective May 12, 2026</p>
+  <p class="updated">Last updated September 4, 2026</p>
 
   <p>Bloom (the "App") is a single-player merge puzzle game published by Taoufik Jabbari ("we", "us"). This policy explains what data the App collects, how we use it, and your choices.</p>
 
   <div class="callout">
-    <strong>Quick summary:</strong> Bloom stores your scores on your device. It uses Google Firebase to anonymously record your best score on a global leaderboard, and Google AdMob to show ads. We do not collect your name, email, phone, location, or contacts.
+    <strong>Quick summary:</strong> Bloom stores your scores on your device. It uses Google Firebase (Firestore for the anonymous leaderboard, Analytics for usage, Crashlytics for crash reports), and Google AdMob to show ads. An optional one-time Remove Ads purchase is available, and you can delete your leaderboard data at any time. We do not collect your name, email, phone, location, or contacts.
   </div>
 
   <h2>1. Information we collect</h2>
@@ -39,8 +39,10 @@
   <ul>
     <li><strong>Game progress (on your device only):</strong> your current board, best score, and the highest plant tier reached. Stored in iOS local storage. Never leaves your device.</li>
     <li><strong>Leaderboard data (anonymous):</strong> when you open World Ladder, Bloom sends an anonymous Firebase user ID, a randomly-generated display handle (e.g. "WildLotus3142"), and your best score to Google Firestore so the leaderboard can rank you. The display handle is auto-generated; no personal info.</li>
-    <li><strong>Advertising identifiers:</strong> Google AdMob may use your device's IDFA (Identifier for Advertisers) to show personalized ads, subject to your iOS App Tracking Transparency choice. If you decline tracking when prompted, AdMob will serve only non-personalized ads.</li>
-    <li><strong>Crash and diagnostic data:</strong> standard iOS / App Store crash reports may be shared with us by Apple, anonymized and aggregated.</li>
+    <li><strong>Usage analytics:</strong> Firebase Analytics records standard, anonymized usage events so we can understand how the game is played.</li>
+    <li><strong>Advertising identifiers:</strong> Google AdMob may use your device's advertising identifier (IDFA on iOS, advertising ID on Android) to show personalized ads, subject to your App Tracking Transparency choice on iOS and consent rules in the EU/UK. If you decline tracking when prompted, AdMob will serve only non-personalized ads.</li>
+    <li><strong>Crash and diagnostic data:</strong> Firebase Crashlytics collects crash reports (device model, OS version, and the state of the App at the moment of a crash) so we can find and fix bugs. These reports contain no personal information.</li>
+    <li><strong>Purchases:</strong> Bloom offers an optional one-time "Remove Ads" purchase, processed by Apple through the App Store (StoreKit) or by Google through Google Play Billing. Apple or Google handles payment; we never see your card or billing details.</li>
   </ul>
 
   <h2>2. Information we do NOT collect</h2>
@@ -53,23 +55,24 @@
   <h2>3. How third parties use data</h2>
   <p>Bloom uses two third-party services:</p>
   <ul>
-    <li><strong>Google Firebase (Anonymous Auth + Firestore):</strong> provides anonymous identities so leaderboard scores can be ranked. See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase's privacy notice</a>.</li>
+    <li><strong>Google Firebase (Anonymous Auth, Firestore, Analytics, Crashlytics):</strong> provides anonymous identities so leaderboard scores can be ranked, and reports usage and crash data. See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase's privacy notice</a>.</li>
     <li><strong>Google AdMob:</strong> serves banner, interstitial, and rewarded video ads. AdMob may collect device identifiers (IDFA, IP) for ad delivery, fraud prevention, and frequency capping. See <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google's policy</a> and <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob data practices</a>.</li>
+    <li><strong>Apple App Store / Google Play:</strong> processes the optional Remove Ads purchase. See <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's privacy policy</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a>.</li>
   </ul>
 
-  <h2>4. App Tracking Transparency (iOS)</h2>
-  <p>On first launch, iOS will ask you whether to allow Bloom to track you across other apps and websites for advertising purposes. Your choice is respected:</p>
+  <h2>4. Ad consent and tracking choices</h2>
+  <p>In the EU, UK, and EEA, Bloom shows a consent form before requesting personalized ads. On first launch, iOS will ask you whether to allow Bloom to track you across other apps and websites for advertising purposes. Your choice is respected:</p>
   <ul>
     <li><strong>Allow:</strong> AdMob may serve personalized ads based on your activity in other apps.</li>
     <li><strong>Ask App Not To Track:</strong> AdMob will only serve non-personalized (contextual) ads.</li>
   </ul>
-  <p>You can change this any time in iOS Settings → Privacy & Security → Tracking.</p>
+  <p>You can change this any time: on iOS, in Settings → Privacy & Security → Tracking; on Android, in Settings → Privacy → Ads. You can also manage AdMob's use of your data directly through Google at <a href="https://myadcenter.google.com" target="_blank" rel="noopener">myadcenter.google.com</a>. Purchasing Remove Ads removes all ads.</p>
 
   <h2>5. Children's privacy</h2>
   <p>Bloom is rated for ages 4+ and is suitable for all audiences. We do not knowingly collect personal information from children. The only data leaving the device is an anonymous Firebase ID + a randomly-generated handle + a score. If you believe a child has provided any identifiable information, please email <a href="mailto:taoufik.leon.jabbari@gmail.com">taoufik.leon.jabbari@gmail.com</a> and we will delete it.</p>
 
   <h2>6. Data retention and deletion</h2>
-  <p>On-device data is removed when you uninstall the App. Leaderboard scores are tied to an anonymous, ephemeral Firebase ID — to request deletion of your leaderboard entry, email <a href="mailto:taoufik.leon.jabbari@gmail.com">taoufik.leon.jabbari@gmail.com</a> with the random handle shown on your device (Settings inside the game).</p>
+  <p>On-device data is removed when you uninstall the App. Leaderboard scores are tied to an anonymous, ephemeral Firebase ID. To delete your leaderboard entry, account, and everything tied to your anonymous ID, open Settings inside the App and use "Delete my data" — this removes your Firestore leaderboard row and Firebase account and clears local data immediately. You can also request deletion by emailing <a href="mailto:taoufik.leon.jabbari@gmail.com">taoufik.leon.jabbari@gmail.com</a> with the random handle shown on your device (Settings inside the game).</p>
 
   <h2>7. International transfers</h2>
   <p>Firebase and AdMob are operated by Google LLC (USA). Data sent to those services may be stored or processed in the United States. By using Bloom you consent to such transfer where applicable.</p>
