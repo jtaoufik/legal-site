@@ -33,7 +33,7 @@
   <p>Introva (the "App") is a private journaling app published by Taoufik Jabbari ("we", "us"). Introva lets you log your day by text or voice and turns your entries into a weekly report. This policy explains what data the App handles, who we share it with, and your choices.</p>
 
   <div class="callout">
-    <strong>Quick summary:</strong> Your journal entries and moods are encrypted at rest on our server in Germany. Once a week they are decrypted and processed by Anthropic's Claude, running on the developer's own Mac, to generate your report; nothing else is kept by that process. We sign you in with your email or your Apple relay address through Firebase Auth, and use Firebase Analytics and Crashlytics.
+    <strong>Quick summary:</strong> Your journal entries and moods are encrypted at rest on our server in Germany. Once a week they are analysed to generate your report. We sign you in with your email or your Apple relay address through Firebase Auth, and use Firebase Analytics and Crashlytics.
   </div>
 
   <h2>1. Information the App handles</h2>
@@ -47,9 +47,12 @@
   </ul>
 
   <h2>2. How the AI report is made</h2>
-  <p>Once a week, your encrypted entries for that week are decrypted and processed by Anthropic's Claude, run by the developer on his own Mac rather than a shared cloud service. Claude reads your entries to write your weekly report and to update a small per-person profile file that helps future reports stay consistent. Nothing beyond that report and profile file is kept by this process, and both are deleted when you delete your account.</p>
+  <p>Once a week, Introva analyses your entries to write your report. This analysis is performed by our AI processing provider under contract; your entries are not used to train any model and are removed from the processing environment after each run.</p>
 
-  <h2>3. What we do not collect</h2>
+  <h2>3. Your data, your control</h2>
+  <p>You can download all your data or delete it at any time from the app's Settings, without contacting us. Deleting your data removes every entry, report and profile from our systems within 24 hours; deleting your account also removes your sign-in. We never sell your data and we do not show ads.</p>
+
+  <h2>4. What we do not collect</h2>
   <ul>
     <li>We do not access your microphone beyond transcribing a voice entry you choose to record, and we do not keep the audio itself.</li>
     <li>We do not collect your location.</li>
@@ -58,13 +61,13 @@
     <li>We do not show ads and we do not track you across other apps or websites.</li>
   </ul>
 
-  <h2>4. Retention and deletion</h2>
-  <p>You can delete individual entries at any time in the App. You can export your entries and reports from the App before deleting them. Deleting your account deletes your entries, moods, reports, and the AI profile file described in section 2 from our server. Analytics and crash data are retained only as long as needed to operate and improve the App and are not tied to your journal content.</p>
+  <h2>5. Retention and deletion</h2>
+  <p>You can delete individual entries at any time in the App. You can export your entries and reports from the App before deleting them. Deleting your account deletes your entries, moods, reports, and the AI profile file from our server. Analytics and crash data are retained only as long as needed to operate and improve the App and are not tied to your journal content.</p>
 
-  <h2>5. Not therapy</h2>
+  <h2>6. Not therapy</h2>
   <p>Introva is a journaling and self-reflection tool. It is not therapy, not a medical device, and not a substitute for professional mental health care. If you are in crisis or need medical advice, please contact a qualified professional or your local emergency services.</p>
 
-  <h2>6. Contact</h2>
+  <h2>7. Contact</h2>
   <p>Questions or requests, including data deletion or export: <a href="mailto:goloio32@gmail.com">goloio32@gmail.com</a>.</p>
 
   <footer><p>© 2026 Taoufik Jabbari · <a href="/introva/support">Support</a></p></footer>
