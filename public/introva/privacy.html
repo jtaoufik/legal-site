@@ -28,46 +28,97 @@
 <div class="wrap">
   <p class="crumb"><a href="/">Apps</a> · <a href="/introva/">Introva</a> · Privacy</p>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated September 5, 2026</p>
+  <p class="updated">Effective 11 September 2026</p>
 
-  <p>Introva (the "App") is a private journaling app published by Taoufik Jabbari ("we", "us"). Introva lets you log your day by text or voice and turns your entries into a weekly report. This policy explains what data the App handles, who we share it with, and your choices.</p>
+  <p>Introva (the "App") is a private journaling app published by Taoufik Jabbari ("we", "us"). Introva lets you log your day by text or voice and turns your entries into a weekly report. This policy explains what data the App collects, how it is collected, who receives it, and your choices. It applies to the iOS and Android versions of the App.</p>
 
   <div class="callout">
-    <strong>Quick summary:</strong> Your journal entries and moods are encrypted at rest on our server in Germany. Once a week they are analysed to generate your report. We sign you in with your email or your Apple relay address through Firebase Auth, and use Firebase Analytics and Crashlytics.
+    <strong>Quick summary:</strong> Your journal entries, moods and weekly reports are stored encrypted on our server in Germany, copied every hour to a computer we operate, and read once a week by Anthropic (Claude) to write your report. You sign in through Firebase Auth: with Apple or an email address and password on iOS, with Google on Android. We use Firebase Analytics, Crashlytics and Cloud Messaging. We show no ads, we sell no data, and we do not track you across other companies' apps or websites.
   </div>
 
-  <h2>1. Information the App handles</h2>
+  <h2>1. What we collect</h2>
+  <p>This list matches the data types declared on the App's store listing. "Linked to you" means the data is stored together with your account. None of these data types is used for tracking.</p>
   <ul>
-    <li><strong>Account identity:</strong> your email address, or the private relay address Apple gives us if you sign in with "Hide My Email," through Firebase Auth. We use this only to identify your account and sign you in.</li>
-    <li><strong>Journal entries and moods:</strong> the text or transcribed voice entries you write, and the mood you attach to them. They are encrypted at rest on our server, hosted in Germany.</li>
-    <li><strong>Weekly report:</strong> the summary generated from your entries once a week, stored on your account so you can read it back.</li>
-    <li><strong>Payment:</strong> the App Store or Google Play charges the price of the App. We never see your payment details and receive nothing about the purchase.</li>
-    <li><strong>Usage analytics:</strong> Firebase Analytics records standard, anonymized usage events (screens opened, sessions started) so we can understand how the App is used.</li>
-    <li><strong>Crash and diagnostic data:</strong> Firebase Crashlytics collects crash reports (device model, OS version, and the state of the App at the moment of a crash) so we can find and fix bugs.</li>
+    <li><strong>User ID</strong> (linked to you): the account identifier Firebase Auth assigns to you when you sign in. It is the key under which your entries, reports, settings and push tokens are stored on our server. Used for app functionality.</li>
+    <li><strong>Email address</strong> (linked to you): the address you sign in with, or the private relay address Apple gives us if you choose "Hide My Email". If you join the waitlist before you have an account, the email address you type in is stored on the waitlist. Used for app functionality: signing you in, and telling you when a waitlist spot opens.</li>
+    <li><strong>Name</strong> (linked to you): the full name Sign in with Apple or Google sign-in hands over, stored by Firebase Auth as the display name of your account. Our own server does not store it. Used for app functionality.</li>
+    <li><strong>Other user content</strong> (linked to you): your journal entries (typed or transcribed from voice), the mood you attach to them, the weekly reports generated from them, and the profile file the report builds on from week to week. Used for app functionality.</li>
+    <li><strong>Device ID</strong> (linked to you): the push notification token (APNs on iOS, Firebase Cloud Messaging on both platforms) stored on your account so the App can tell you that a report is ready, and, if you join the waitlist, that a spot has opened. Firebase Analytics also reads an app instance identifier and, on iOS, the identifier for vendor, and Firebase creates an installation identifier for the App on your device. Used for app functionality and analytics.</li>
+    <li><strong>Product interaction</strong> (not linked to you): the standard usage events Firebase Analytics records automatically, such as screens opened and sessions started. Used for analytics.</li>
+    <li><strong>Coarse location</strong> (not linked to you): Firebase Analytics derives an approximate location (country or city) from the IP address of the request. The App never uses Location Services, never asks for location permission and never collects a precise location. Used for analytics.</li>
+    <li><strong>Crash data</strong> (not linked to you): crash reports collected by Firebase Crashlytics, with the device model, operating system version and the state of the App at the moment of the crash. Used for app functionality.</li>
+    <li><strong>Other diagnostic data</strong> (not linked to you): technical metadata the Firebase SDKs send outside crash reports, such as device model, operating system version, App version, network type, SDK versions and session timing, and the App Check attestation (Apple App Attest on iOS, Play Integrity on Android) that proves requests to our server come from a genuine copy of the App. Used for app functionality and analytics.</li>
+    <li><strong>Other data types</strong> (linked to you): your time zone identifier and the hour you chose for the daily reminder, stored on your account so entries are dated in your local time and the report is generated at the right moment for you. The time zone is also given to the report generator. Used for app functionality and analytics.</li>
   </ul>
 
-  <h2>2. How the AI report is made</h2>
-  <p>Once a week, Introva analyses your entries to write your report. This analysis is performed by Anthropic (Claude) as our processor under contract; your entries are not used to train any model and are removed from the processing environment after each run.</p>
-
-  <h2>3. Your data, your control</h2>
-  <p>You can download all your data or delete it at any time from the app's Settings, without contacting us. Deleting your data removes every entry, report and profile from our systems within 24 hours; deleting your account also removes your sign-in. We never sell your data and we do not show ads.</p>
-
-  <h2>4. What we do not collect</h2>
+  <h2>2. How we collect it</h2>
   <ul>
-    <li>We do not access your microphone beyond transcribing a voice entry you choose to record, and we do not keep the audio itself.</li>
-    <li>We do not collect your location.</li>
-    <li>We do not access your contacts.</li>
-    <li>We do not collect any health data (no HealthKit, no fitness or medical records).</li>
-    <li>We do not show ads and we do not track you across other apps or websites.</li>
+    <li><strong>Sign-in:</strong> when you sign in with Apple or with an email address and password (iOS), or with Google (Android), Firebase Auth receives the credential and gives us your user ID, email address and, for Apple and Google sign-in, your name.</li>
+    <li><strong>Journaling:</strong> entries and moods are sent to our server over HTTPS when you save them and stored encrypted at rest with AES-GCM.</li>
+    <li><strong>Voice entries:</strong> when you record a voice entry, the microphone is used only while you hold the mic on, and the audio is transcribed by the speech recognition service of your device (Apple speech recognition on iOS, the device's speech service on Android, usually Google). Depending on the device and language, that service may process the audio on its own servers. We receive only the resulting text; we never receive or store the audio.</li>
+    <li><strong>Waitlist:</strong> if the App is full, the waitlist screen sends the email address you type in, together with a push token if you allow notifications, to our server before any account exists.</li>
+    <li><strong>Push notifications:</strong> if you allow notifications, the App registers with Apple (APNs) or Google (Firebase Cloud Messaging) and sends the resulting token to our server. The notifications themselves ("Your weekly report is ready", "Your spot is open") contain no journal content.</li>
+    <li><strong>Settings:</strong> your time zone and reminder hour are sent to our server when you finish onboarding and each time you sign in.</li>
+    <li><strong>Automatically:</strong> analytics events, crash reports and diagnostic metadata are collected by the Firebase SDKs while the App runs.</li>
+    <li><strong>App lock:</strong> the optional Face ID, Touch ID or biometric lock is checked by your device's operating system. We never receive biometric data.</li>
+    <li><strong>Payment:</strong> the App Store or Google Play charges the price of the App. Apple and Google never share your card details with us, and we receive nothing about the purchase.</li>
   </ul>
 
-  <h2>5. Retention and deletion</h2>
-  <p>You can delete individual entries at any time in the App. You can export your entries and reports from the App before deleting them. Deleting your account deletes your entries, moods, reports, and the AI profile file from our server. Analytics and crash data are retained only as long as needed to operate and improve the App and are not tied to your journal content.</p>
+  <h2>3. Third parties</h2>
+  <p>We share data only with the processors below, each for the purpose stated. We never sell your data.</p>
+  <ul>
+    <li><strong>Apple (Sign in with Apple, App Store):</strong> receives your sign-in on iOS and hands us your name and email address or relay address. Apple speech recognition may process the audio of voice entries on iOS. Apple Push Notification service delivers notifications. Apple handles the purchase of the App and does not share card details with us.</li>
+    <li><strong>Google (Google sign-in, Google Play):</strong> on Android, Google sign-in hands us your name and email address, the device's speech service may process the audio of voice entries, and Google Play handles the purchase of the App without sharing card details with us.</li>
+    <li><strong>Google Firebase Auth:</strong> stores your user ID, email address, name and sign-in credential, and issues the token the App uses to talk to our server.</li>
+    <li><strong>Google Firebase Analytics:</strong> receives usage events, the app instance identifier (and the identifier for vendor on iOS), diagnostic metadata and the coarse location derived from the IP address. No precise location: the App never uses Location Services.</li>
+    <li><strong>Google Firebase Crashlytics:</strong> receives crash reports, device model and operating system version.</li>
+    <li><strong>Google Firebase Cloud Messaging and Apple APNs:</strong> receive the push token and deliver notifications.</li>
+    <li><strong>Google Firebase App Check:</strong> receives the Apple App Attest or Play Integrity attestation that proves requests come from a genuine copy of the App.</li>
+    <li><strong>Our own server (hosted in Germany):</strong> stores your user ID, email address, time zone, reminder hour, push tokens, waitlist entry, and your encrypted entries, moods, reports and profile file.</li>
+    <li><strong>Anthropic (Claude):</strong> receives, once a week, the journal entries of the week, your profile file and your time zone, and returns the report. It receives no name, no email address and no account identifier.</li>
+  </ul>
 
-  <h2>6. Not therapy</h2>
+  <h2>4. How the AI report is made</h2>
+  <p>A computer we operate (the "report computer") connects to our server every hour and downloads the new entries, moods and profile file of every account, decrypted, so that the weekly report can be built. It keeps them as plain text until the report is made. Once a week, after Sunday 9:00 in your time zone, the entries of the week are sent to Anthropic (Claude) together with your profile file and your time zone, and the resulting report and updated profile file are stored encrypted on your account. Anthropic receives no name, no email address and no account identifier; the request is made from a Claude session with no tools and no access to files.</p>
+  <p>Once the report is stored on our server, the entries it was built from are deleted from the report computer; entries written after the cutoff are kept for the next report. If no report could be made that week (too few entries, or a report our checks rejected), the entries stay there until a later run succeeds. The profile file and past reports are kept on the report computer so the next report can build on them. Everything under your account on the report computer is deleted at the run that follows a "Delete my data" or "Delete my account" request.</p>
+
+  <h2>5. Your choices and consent</h2>
+  <ul>
+    <li><strong>Notifications:</strong> the App asks once, during onboarding (or on the waitlist screen if the App is full). You can change your answer at any time in your device settings; without permission no push token is created.</li>
+    <li><strong>Microphone and speech recognition:</strong> asked only when you start your first voice entry. Typed entries work without them.</li>
+    <li><strong>App Tracking Transparency and advertising identifiers:</strong> the App shows no ads, does not use the advertising identifier on iOS or Android, and does not track you, so no tracking prompt is shown.</li>
+    <li><strong>Analytics:</strong> Firebase Analytics runs in the App without a separate opt-in; its events are not linked to your account and contain no journal content.</li>
+  </ul>
+
+  <h2>6. Retention and deletion</h2>
+  <p>Your entries, moods, reports, profile file, settings and push tokens are kept for as long as your account exists. From the App's Settings you can, without contacting us:</p>
+  <ul>
+    <li><strong>Download my data:</strong> exports your entries, reports, profile file and account settings (email address, time zone, reminder hour) as a file you can save or share.</li>
+    <li><strong>Delete my data:</strong> deletes every entry, report and profile file from our server and from the report computer, while keeping your account and sign-in.</li>
+    <li><strong>Delete my account:</strong> deletes everything above plus your push tokens, removes your email address from the account row and deletes your sign-in from Firebase Auth. Two things remain: the account row itself, marked deleted and reduced to your user ID, time zone, reminder hour and creation date (so that the same account can be recognised and reactivated if you sign in again), and a log line with a hashed form of your user ID and the date of the deletion. Neither contains your name, email address or any content.</li>
+  </ul>
+  <p>Individual entries can be deleted at any time in the App. A deleted entry disappears from the App and is no longer sent to the report computer, but its encrypted row stays in our database until you delete your data or your account, and a copy that had already reached the report computer that hour may still be read by that week's report. "Delete my data" and "Delete my account" take effect on our server immediately; the copy on the report computer is removed at its next hourly run. A waitlist entry (email address and push token) is kept on the waitlist table until you ask us to remove it by email. Crash and analytics data are retained by Google under the Firebase retention settings and are not tied to your journal content. You can also email <a href="mailto:goloio32@gmail.com">goloio32@gmail.com</a> for any deletion or export request.</p>
+
+  <h2>7. What we do not do</h2>
+  <ul>
+    <li>We do not keep the audio of your voice entries; only the transcribed text is stored.</li>
+    <li>We do not use Location Services or collect a precise location. The only location data is the approximate location Firebase Analytics derives from the IP address, and it is not linked to your account.</li>
+    <li>We do not access your contacts, photos or calendar.</li>
+    <li>We do not collect health data (no HealthKit, no Health Connect, no fitness or medical records).</li>
+    <li>We do not show ads, do not use advertising identifiers, and do not track you across other companies' apps or websites.</li>
+    <li>We do not sell your data.</li>
+  </ul>
+
+  <h2>8. Children</h2>
+  <p>Introva is not directed at children under 13, and we do not knowingly collect data from them. If you believe a child has created an account, contact us and we will delete it.</p>
+
+  <h2>9. Not therapy</h2>
   <p>Introva is a journaling and self-reflection tool. It is not therapy, not a medical device, and not a substitute for professional mental health care. If you are in crisis or need medical advice, please contact a qualified professional or your local emergency services.</p>
 
-  <h2>7. Contact</h2>
+  <h2>10. Changes to this policy</h2>
+  <p>When we change this policy we update the effective date at the top of this page. Continued use of the App after a change means the updated policy applies.</p>
+
+  <h2>11. Contact</h2>
   <p>Questions or requests, including data deletion or export: <a href="mailto:goloio32@gmail.com">goloio32@gmail.com</a>.</p>
 
   <footer><p>© 2026 Taoufik Jabbari · <a href="/introva/support">Support</a></p></footer>

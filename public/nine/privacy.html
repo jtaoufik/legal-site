@@ -26,65 +26,83 @@
 <div class="wrap">
   <p class="crumb"><a href="/">Apps</a> · Nine: Sudoku Puzzle · Privacy</p>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated September 4, 2026</p>
+  <p class="updated">Effective date: 11 September 2026</p>
 
-  <p>Nine: Sudoku Puzzle (the "App") is a sudoku puzzle game published by Chronos Studio .Inc ("we", "us"), available on the App Store (bundle <code>com.taoufikjabbari.ninesudoku</code>) and Google Play (package <code>com.taoufikjabbari.nine</code>). This policy explains what data the App collects, how we use it, and your choices.</p>
+  <p>Nine: Sudoku Puzzle (the "App") is a sudoku puzzle game published by Chronos Studio .Inc ("we", "us"), available on the App Store (bundle <code>com.taoufikjabbari.ninesudoku</code>) and Google Play (package <code>com.taoufikjabbari.nine</code>). This policy explains what data the App collects, how it is collected, which third parties receive it, and the choices you have. It matches the App Privacy details published on the App Store and the Data safety section on Google Play.</p>
 
   <div class="callout">
-    <strong>Quick summary:</strong> Nine keeps your puzzles, records, and settings on your device only. If you choose to complete the optional daily puzzle, we send a display name, country code, and completion time to Google Firebase under a random device ID, not an account. Google AdMob shows ads, and Firebase Analytics records anonymized usage. We do not collect your real name, email, phone, or precise location, and no account or sign-in is required to play.
+    <strong>Quick summary:</strong> Nine keeps your puzzles, records, and settings on your device. No account or sign-in is required to play, and we never ask for your real name, email address, phone number, contacts, photos, or camera. If you complete the optional daily puzzle, the App sends a display name, a country code, and your completion time to Google Firebase under a random identifier generated on your device. Google AdMob shows ads and, with your permission, may use your advertising identifier. Firebase Analytics records how the game is used, Firebase Crashlytics collects crash reports, and the Google SDKs also produce performance and diagnostic data. Google may infer an approximate location from your IP address; the App never uses your device's Location Services.
   </div>
 
-  <h2>1. Information we collect</h2>
-  <p>Nine collects the minimum information needed to deliver the game's features:</p>
+  <h2>1. What we collect</h2>
+  <p>The list below names every data type declared for Nine, what it is used for, whether it is linked to you, and whether it is used for tracking. "Linked to you" means the data is keyed to an identifier such as your advertising identifier or the random device identifier described below. Nine has no accounts, so nothing is linked to a name or email address.</p>
   <ul>
-    <li><strong>Game progress (on your device only):</strong> your records, best times, daily streak, the puzzle currently in progress, and your chosen language. Stored in local storage on your device. This never leaves your device unless you choose to export it.</li>
-    <li><strong>World leaderboard (optional, anonymous):</strong> if you complete the daily puzzle, the App sends a display name (chosen by you in Settings — the default is simply "Player", 16 characters max), a two-letter country code derived from your device's region setting, and your completion time in seconds to Google Firebase Firestore. This is keyed to a random identifier generated on your device — not to any account, email, or advertising ID.</li>
-    <li><strong>Usage analytics:</strong> Firebase Analytics records standard app usage events — puzzle started, puzzle won (with its difficulty and duration), hints used, and language chosen — so we can understand how the game is played. We do not build an advertising profile from this data.</li>
-    <li><strong>Advertising identifiers:</strong> Google AdMob may use your device's advertising identifier (IDFA on iOS, advertising ID on Android) to show ads, subject to the consent and tracking choices described in section 4.</li>
-    <li><strong>Crash and diagnostic data:</strong> Google Firebase Crashlytics collects crash reports (device model, OS version, and the state of the App at the moment of a crash) so we can find and fix bugs. These reports contain no personal information.</li>
+    <li><strong>Device ID (linked to you, used for tracking after you allow it):</strong> your device's advertising identifier (IDFA on iOS, Google advertising ID on Android), the Firebase installation ID and app instance ID assigned to your copy of the App, and the random identifier the App generates on your device for the daily leaderboard. Used for third-party advertising, our own advertising and marketing (measuring how our ads perform), analytics, and app functionality. On iOS, the advertising identifier is used for tracking across other companies' apps and websites only if you tap Allow in the App Tracking Transparency prompt. On Android, it is used for personalized ads only under the Google consent choices described in section 4.</li>
+    <li><strong>User ID (linked to you):</strong> the random identifier generated on your device and stored with your daily leaderboard entries so a second run of the same daily puzzle replaces your earlier row instead of adding a duplicate. Used for app functionality only. It is not tied to any account, email, or advertising identifier.</li>
+    <li><strong>Product Interaction (linked to you):</strong> how you use the App: puzzles started, won, or abandoned (with difficulty, duration, mistakes, and hints), hints used, the tutorial, screens viewed, language chosen, and backup exports or imports, recorded by Firebase Analytics together with its automatic events (sessions, screen views, first open). Google AdMob and the consent message also record how you interact with ads and with the consent form. Used for analytics, third-party advertising, our own advertising and marketing, and app functionality.</li>
+    <li><strong>Advertising Data (linked to you):</strong> which ads were shown to you and how you interacted with them (impressions, clicks, ad load results), collected by Google AdMob. Used for third-party advertising, our own advertising and marketing, and analytics, including measuring ad performance.</li>
+    <li><strong>Coarse Location (linked to you):</strong> an approximate location (country, region, or city level) that Google AdMob, the Google consent message, and Firebase Analytics infer from your IP address, plus the two-letter country code read from your device's region setting for the leaderboard flag. Used for third-party advertising, our own advertising and marketing, analytics, and app functionality. The App never asks for or uses your device's Location Services, and no precise location is collected.</li>
+    <li><strong>Crash Data (not linked to you):</strong> crash reports collected by Firebase Crashlytics (device model, OS version, the stack trace, and the state of the App at the moment of a crash). Used for app functionality and analytics, so we can find and fix bugs.</li>
+    <li><strong>Performance Data (not linked to you):</strong> app launch time, hang rate, energy use, session metadata (session length, time in background, network type) collected by Google AdMob and the Firebase SDK. Used for app functionality, analytics, third-party advertising, and our own advertising and marketing.</li>
+    <li><strong>Other Diagnostic Data (not linked to you):</strong> technical logs the Firebase and AdMob SDKs produce to work correctly, such as the Firebase user agent, SDK version, data transport metrics, and ad request diagnostics. Used for app functionality, analytics, third-party advertising, and our own advertising and marketing.</li>
   </ul>
+  <p><strong>Kept on your device only:</strong> your records, best times, daily streak, the puzzle currently in progress, your chosen language, and your display name are stored in local storage on your device. They leave your device only through the leaderboard entry described above or when you export a backup yourself.</p>
 
-  <h2>2. Information we do NOT collect</h2>
+  <h2>2. How we collect it</h2>
   <ul>
-    <li>We do not require an account, sign-in, email address, or name to play.</li>
-    <li>We do not access your contacts, photos, calendar, microphone, or camera.</li>
-    <li>We do not collect precise or IP-based location — only the two-letter country code derived from your device's region setting, used for the leaderboard.</li>
-    <li>We do not sell or rent any data to third parties.</li>
+    <li><strong>From you:</strong> the display name you type in Settings (16 characters max; if you never set one, the App generates a random handle such as an adjective, a noun, and three digits). Names containing profanity are refused and replaced with a generated handle.</li>
+    <li><strong>Automatically through the App:</strong> when you finish the daily puzzle, the App writes your display name, the country code from your device's region setting, your completion time in seconds, and a server timestamp to Google Firebase Firestore, keyed to the random device identifier. This is a worldwide leaderboard that every player can read, so your display name, country flag, and time are public.</li>
+    <li><strong>Automatically through third-party SDKs:</strong> the Google Mobile Ads SDK, the Google consent SDK (UMP), Firebase Analytics, and Firebase Crashlytics collect the identifiers, usage, advertising, location, crash, performance, and diagnostic data listed in section 1 when the App runs.</li>
   </ul>
+  <p>We do not sell or rent your data. We do not access your contacts, photos, calendar, microphone, or camera.</p>
 
-  <h2>3. How third parties use data</h2>
-  <p>Nine uses two third-party services, both operated by Google:</p>
+  <h2>3. Third parties</h2>
+  <p>Nine shares data with the following processors, all operated by Google LLC. No other company receives your data.</p>
   <ul>
-    <li><strong>Google Firebase (Firestore, project "nine-sudoku-app", Analytics, Crashlytics):</strong> stores the optional world leaderboard entries and reports anonymized usage events and crash data. See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase's privacy notice</a>.</li>
-    <li><strong>Google AdMob:</strong> serves ads within the App. AdMob may collect device identifiers for ad delivery, fraud prevention, and frequency capping. See <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google's policy</a> and <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob data practices</a>.</li>
+    <li><strong>Google AdMob (Google Mobile Ads SDK):</strong> serves banner and interstitial ads. Receives your advertising identifier (IDFA or Google advertising ID, subject to your consent and tracking choices), coarse location inferred from your IP address, ad interaction data (ads shown, clicks), product interaction, performance data, and diagnostic data, used for ad delivery, personalization where allowed, frequency capping, fraud prevention, and measuring ad performance. See <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">how Google uses data from partner apps</a> and <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob data practices</a>.</li>
+    <li><strong>Google consent message (User Messaging Platform):</strong> shows the privacy consent form where the law requires it and records your answers. Receives your consent choices, how you interact with the form, coarse location inferred from your IP address, and performance data.</li>
+    <li><strong>Google Firebase Analytics:</strong> receives usage events (the puzzle, hint, tutorial, screen, language, and backup events listed in section 1 plus automatic session events), the Firebase app instance ID, device model and OS version, and coarse location inferred from your IP address. No precise location: the App never uses Location Services. Analytics collection is switched off in our internal test builds.</li>
+    <li><strong>Google Firebase Crashlytics:</strong> receives crash reports (device model, OS version, stack traces, App state at the time of the crash) together with the Firebase installation ID. Crashlytics stays on in every build.</li>
+    <li><strong>Google Firebase Firestore (project "nine-sudoku-app"):</strong> stores the daily leaderboard entries: your display name, country code, completion time, a server timestamp, and the random device identifier they are keyed to.</li>
+    <li><strong>Firebase support services:</strong> Firebase Installations, Firebase Sessions, and Google Data Transport run underneath the SDKs above and carry the installation ID, session metadata, and SDK diagnostic data described in section 1.</li>
   </ul>
+  <p>See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase's privacy and security notice</a> for how Google handles Firebase data. Nine has no in-app purchases, no push notifications, no sign-in, and no backend of its own beyond Firestore.</p>
 
-  <h2>4. Ad consent and tracking choices</h2>
-  <p>If you are located in the European Economic Area, the UK, or Switzerland, a Google-certified consent message (UMP) is shown before any personalized ads are served, letting you choose whether to allow personalization. You can reopen these privacy choices at any time from within the App's Settings.</p>
-  <p>On iOS, the App Tracking Transparency prompt governs whether AdMob may use your advertising identifier:</p>
+  <h2>4. Consent and tracking choices</h2>
+  <p>If you are located in the European Economic Area, the UK, or Switzerland, a Google-certified consent message (UMP) is shown before any personalized ads are served, letting you choose whether to allow personalization. You can reopen these privacy choices at any time from the App's Settings, where the privacy options row appears whenever your region requires it.</p>
+  <p>On iOS, the App Tracking Transparency prompt governs whether AdMob may use your advertising identifier to track you across other companies' apps and websites:</p>
   <ul>
-    <li><strong>Allow:</strong> AdMob may serve personalized ads based on your activity in other apps.</li>
-    <li><strong>Ask App Not To Track:</strong> AdMob serves only non-personalized ads. The game stays fully playable either way.</li>
+    <li><strong>Allow:</strong> AdMob may serve personalized ads based on your activity in other apps and measure ad campaigns using your advertising identifier.</li>
+    <li><strong>Ask App Not To Track:</strong> AdMob serves only non-personalized ads and the advertising identifier is not used for tracking. The game stays fully playable either way.</li>
   </ul>
-  <p>You can change this any time in your device's system settings (iOS: Privacy &amp; Security → Tracking; Android: ad settings under Google in system settings).</p>
+  <p>On Android, the Google advertising ID is used for personalized ads only within the consent choices above; you can reset or delete your advertising ID and opt out of ad personalization in your device's Google settings. You can change your choices at any time in your device's system settings (iOS: Privacy &amp; Security, then Tracking; Android: Ads under Google in system settings).</p>
 
   <h2>5. Exporting and importing your progress</h2>
-  <p>You can export your records, streak, and puzzle progress to a JSON file from within the App, and import that file on another device to carry your progress across. This file is created and shared entirely at your own initiative — it never leaves your device unless you choose to send or transfer it yourself, and we never see or receive a copy of it.</p>
+  <p>You can export your records, streak, puzzle progress, display name, and leaderboard identifier to a JSON file from within the App, and import that file on another device to carry your progress across. This file is created and shared entirely at your own initiative: it never leaves your device unless you choose to send or transfer it yourself, and we never see or receive a copy of it.</p>
 
-  <h2>6. Children's privacy</h2>
-  <p>Nine is suitable for all audiences but is not directed at children under 13, and we do not knowingly collect personal information from them. If you believe a child has submitted a leaderboard entry, email <a href="mailto:taoufik.leon.jabbari@gmail.com">taoufik.leon.jabbari@gmail.com</a> and we will remove it.</p>
+  <h2>6. Retention</h2>
+  <ul>
+    <li><strong>On your device:</strong> game progress, settings, and your display name stay until you clear the App's data or uninstall it.</li>
+    <li><strong>Leaderboard entries:</strong> kept in Firestore for as long as the daily leaderboards are published, or until you ask us to delete them.</li>
+    <li><strong>Analytics, crash, and performance data:</strong> retained by Google under Firebase's retention settings for Analytics and Crashlytics.</li>
+    <li><strong>Advertising data:</strong> retained by Google AdMob under Google's advertising data retention policies.</li>
+  </ul>
 
   <h2>7. Your rights and data deletion</h2>
-  <p>Because Nine has no account system, there is no profile to access or export beyond what is already on your device. Clearing the App's data or uninstalling it permanently removes everything held locally, including your records, streak, and puzzle in progress. To have a leaderboard entry removed, email <a href="mailto:taoufik.leon.jabbari@gmail.com">taoufik.leon.jabbari@gmail.com</a> with the display name and approximate date shown next to your entry, and we will delete it.</p>
+  <p>Because Nine has no account system, there is no profile to access or export beyond what is already on your device. Clearing the App's data or uninstalling it permanently removes everything held locally, including your records, streak, puzzle in progress, and the random device identifier, so new leaderboard entries can no longer be connected to old ones.</p>
+  <p>To have your leaderboard entries deleted from Firestore, open Settings in the App, tap "Contact us" (which opens an email to us), or write directly to <a href="mailto:goloio32@gmail.com">goloio32@gmail.com</a> with the display name and the approximate date shown next to your entry. We delete the rows as soon as possible and at the latest within 30 days. Depending on where you live, you may also have the right to access, correct, or object to the processing of your data; use the same address for any such request. Data held by Google AdMob is keyed to an advertising identifier you can reset yourself (see section 4); Firebase Analytics and Crashlytics data is keyed to installation identifiers that are discarded when you uninstall the App.</p>
 
-  <h2>8. International transfers</h2>
-  <p>Firebase and AdMob are operated by Google LLC (USA). Data sent to those services may be stored or processed in the United States. By using Nine you consent to such transfer where applicable.</p>
+  <h2>8. Children's privacy</h2>
+  <p>Nine is suitable for all audiences, but it is not directed at children under 13, and we do not knowingly collect personal information from them. If you believe a child has submitted a leaderboard entry, email <a href="mailto:goloio32@gmail.com">goloio32@gmail.com</a> and we will remove it.</p>
 
-  <h2>9. Changes to this policy</h2>
-  <p>We may update this Policy. The "Effective" date above will change when we do. Material changes will be reflected in an updated App Store / Play Store release.</p>
+  <h2>9. International transfers</h2>
+  <p>Firebase and AdMob are operated by Google LLC (USA). Data sent to those services may be stored or processed in the United States and other countries where Google operates. By using Nine you consent to such transfer where applicable.</p>
 
-  <h2>10. Contact</h2>
-  <p>For privacy questions or deletion requests, contact <a href="mailto:taoufik.leon.jabbari@gmail.com">taoufik.leon.jabbari@gmail.com</a>.</p>
+  <h2>10. Changes to this policy</h2>
+  <p>We may update this policy. The effective date at the top of this page changes when we do, and material changes will be reflected in an updated App Store / Google Play release.</p>
+
+  <h2>11. Contact</h2>
+  <p>For privacy questions or deletion requests, contact <a href="mailto:goloio32@gmail.com">goloio32@gmail.com</a>, or use "Contact us" in the App's Settings.</p>
 
   <footer>Nine: Sudoku Puzzle · © 2026 Chronos Studio .Inc</footer>
 </div>

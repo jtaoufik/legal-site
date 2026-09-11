@@ -26,61 +26,79 @@
 <div class="wrap">
   <p class="crumb"><a href="/">Apps</a> · <a href="/trivio/">Trivio</a> · Privacy</p>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated September 4, 2026</p>
+  <p class="updated">Effective 11 September 2026</p>
 
-  <p>Trivio (the "App") is a trivia quiz game published by Taoufik Jabbari ("we", "us"). This policy explains what data the App collects, how we use it, and your choices.</p>
+  <p>Trivio Quiz (the "App", also shown as "Trivio") is a trivia quiz game published by Taoufik Jabbari ("we", "us"). It is available on the Apple App Store and on Google Play, and this policy covers both versions. It explains what data the App collects, how it is collected, which third parties receive it, and the choices you have.</p>
 
   <div class="callout">
-    <strong>Quick summary:</strong> Trivio keeps your game progress and the quizzes you create on your device. Quizzes you choose to publish to the community are stored on Google Firebase under an anonymous ID and your chosen display name. We use Firebase Analytics for anonymized usage data and Google AdMob to show ads. We do not collect your real name, email, phone, location, or contacts.
+    <strong>Quick summary:</strong> Trivio keeps your game progress and the quizzes you build on your device. Quizzes you choose to publish to the community, including any photo you attached to a question, are stored on Google Firebase under an anonymous user ID and the display name you pick. The App shows ads through Google AdMob, measures usage with Firebase Analytics, reports crashes through Firebase Crashlytics and can send push notifications through Firebase Cloud Messaging. These Google services receive a device identifier and infer an approximate location from your IP address. The App never uses Location Services, never asks for your real name, email address or phone number, and has no in-app purchases.
   </div>
 
-  <h2>1. Information we collect</h2>
-  <p>Trivio collects the minimum information needed to deliver the game's features:</p>
+  <h2>1. What we collect</h2>
+  <p>The list below matches the App Privacy labels published on the App Store. "Linked to you" means the data is tied to your anonymous user ID or to your device identifier; "tracking" has the meaning Apple gives it (linking data about you with data from other companies' apps and websites for advertising).</p>
   <ul>
-    <li><strong>Game progress (on your device only):</strong> your scores, results, settings, and the quizzes you build in the in-app editor. Stored in iOS local storage. This never leaves your device unless you choose to publish a quiz.</li>
-    <li><strong>Published community quizzes:</strong> when you choose to publish a quiz to the community, Trivio sends an anonymous Firebase user ID, the display name you pick, and the quiz content (questions and answers) to Google Firestore so other players can find and play it. No real name or email is required to publish.</li>
-    <li><strong>Usage and performance data:</strong> Firebase Analytics records anonymized, aggregated information such as which screens are opened and how the app performs, so we can fix bugs and improve the game.</li>
-    <li><strong>Advertising identifiers:</strong> Google AdMob may use your device's IDFA (Identifier for Advertisers) to show personalized ads, but only if you allow tracking through the iOS App Tracking Transparency prompt. If you do not allow tracking, AdMob serves only non-personalized ads.</li>
-    <li><strong>Crash and diagnostic data:</strong> Google Firebase Crashlytics collects crash reports (device model, OS version, and the state of the App at the moment of a crash) so we can find and fix bugs. These reports contain no personal information.</li>
+    <li><strong>Device ID</strong> (linked to you, used for tracking only with your permission): the advertising identifier of your device (IDFA on iOS, Google advertising ID on Android), the Firebase app instance ID, and the push notification token issued by Apple Push Notification service and Firebase Cloud Messaging. Used for third-party advertising, analytics and app functionality. AdMob uses the advertising identifier for tracking only after you allow it in the iOS App Tracking Transparency prompt; on Android, personalised ads depend on your answer to the Google consent form and on your device's "Opt out of Ads Personalization" setting.</li>
+    <li><strong>User ID</strong> (linked to you): an anonymous Firebase Authentication ID created automatically the first time the App connects. It is the key under which your published quizzes, your abuse reports and your push notification token are stored. Used for app functionality. No name, email or password is involved.</li>
+    <li><strong>Gameplay Content</strong> (linked to you): the quizzes you publish to the community (title, subtitle, emoji, colour, your chosen display name and avatar emoji, the questions and the answers), and the abuse reports you file about a community quiz (the quiz id and title, its author's anonymous ID, your anonymous ID and the reason you selected). Used for app functionality: other players can find and play your quiz, and the moderator account can review reported quizzes.</li>
+    <li><strong>Photos or Videos</strong> (linked to you): if you pick a photo from your photo library for an image question, that photo is stored inside the quiz on your device, and it is uploaded to Google Firestore as part of the quiz when, and only when, you publish that quiz to the community. Used for app functionality. The App does not use the camera and does not scan your photo library.</li>
+    <li><strong>Product Interaction</strong> (linked to you): app launches and session length, which screens you open (for example the game, result, editor and community screens), taps on ads, and your interactions with the consent form. Used for analytics, third-party advertising and app functionality. Firebase Analytics records these events against the Firebase app instance ID, and AdMob records ad interactions against the advertising identifier.</li>
+    <li><strong>Advertising Data</strong> (linked to you): which ads were shown to you and how you interacted with them, recorded by Google AdMob against your device's advertising identifier. Used for third-party advertising and analytics (ad delivery, frequency capping, fraud prevention, and ad performance measurement).</li>
+    <li><strong>Crash Data</strong> (not linked to you): crash reports collected by Firebase Crashlytics, containing the device model, OS version, App version and the state of the App at the moment of the crash. Used for app functionality and analytics so we can find and fix bugs.</li>
+    <li><strong>Performance Data</strong> (not linked to you): launch times, ad load times and other timing measurements collected by Firebase and by the AdMob SDK. Used for app functionality, analytics and third-party advertising (AdMob uses it to decide how and when ads are delivered).</li>
+    <li><strong>Other Diagnostic Data</strong> (not linked to you): technical logs such as SDK versions, network errors and ad request results, collected by Firebase and by the AdMob SDK. Used for app functionality, analytics and third-party advertising.</li>
+    <li><strong>Coarse Location</strong> (linked to you): an approximate location (country or city level) that Google AdMob, Firebase Analytics and the Google consent SDK infer from your IP address on their servers. Used for third-party advertising, analytics and app functionality (deciding whether a consent form must be shown in your region). The App never asks for or uses Location Services and never receives a precise location.</li>
+    <li><strong>Other Data Types</strong> (not linked to you): the device model, language, time zone, OS version and App version that Firebase Cloud Messaging sends to Google when it registers your device for push notifications. Used for analytics.</li>
+  </ul>
+  <p>Data that stays on your device and is never collected: your scores, results, settings, and the quizzes you build but do not publish. They live in the App's local storage and are removed when you uninstall the App.</p>
+
+  <h2>2. How it is collected</h2>
+  <ul>
+    <li>Automatically by the Google SDKs embedded in the App (AdMob, User Messaging Platform, Firebase Analytics, Crashlytics, Cloud Messaging) when the App runs.</li>
+    <li>When you take an action: publishing a quiz, attaching a photo to a question, reporting a quiz, or accepting push notifications.</li>
+    <li>We do not ask for your real name, email address or phone number, and the App has no account creation, no sign-in with Apple or Google, and no in-app purchases.</li>
   </ul>
 
-  <h2>2. Information we do NOT collect</h2>
+  <h2>3. Third parties</h2>
+  <p>Apart from Apple Push Notification service (Apple Inc.) and the app stores themselves, every processor below is operated by Google LLC (USA). Nobody else receives data directly from the App, and we do not sell or rent any data. Google may share advertising data with the ad technology partners listed in its consent form.</p>
   <ul>
-    <li>We do not ask for your real name, email address, or phone number.</li>
-    <li>We do not access your contacts, calendar, microphone, camera, or location.</li>
-    <li>We do not require you to create an account or sign in.</li>
-    <li>We do not sell or rent any data to third parties.</li>
+    <li><strong>Google AdMob:</strong> serves the banner and interstitial ads in the App. It receives the advertising identifier (IDFA or Google advertising ID, for personalised ads only with your consent), your IP address and the coarse location derived from it, ad interaction data (ads seen, taps), and performance and diagnostic data about ad requests. See <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">how Google uses data from partner apps</a> and <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob data practices</a>.</li>
+    <li><strong>Google User Messaging Platform (UMP):</strong> the consent SDK bundled with AdMob. It uses your IP-derived region to decide whether the GDPR or US privacy-options form must be shown, and stores your consent choices and your interactions with the form.</li>
+    <li><strong>Google Firebase Analytics:</strong> receives usage events (app launches, sessions, screens viewed, ad events), the Firebase app instance ID, device model, OS version and App version, and a coarse location derived from your IP address. No precise location: the App never uses Location Services.</li>
+    <li><strong>Firebase Crashlytics:</strong> receives crash reports: device model, OS version, App version and the App's state at the time of the crash.</li>
+    <li><strong>Firebase Cloud Messaging and Apple Push Notification service:</strong> a push token is issued for your device and stored in Firestore under your anonymous user ID together with your device language and platform. On iOS this happens only after you allow notifications; on Android it happens after your first quiz, whether or not you grant the notification permission (no notification is shown unless you allow it). Firebase Cloud Messaging also sends your device model, language, time zone, OS version and App version to Google when it registers the device. Notifications are broadcast messages from us about the App, for example new quizzes to play.</li>
+    <li><strong>Firebase Authentication and Firestore:</strong> Firebase Authentication creates your anonymous user ID. Firestore stores your published quizzes (display name, avatar emoji, quiz content including any attached photo), your abuse reports and your push notification token. See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase's privacy notice</a>.</li>
   </ul>
 
-  <h2>3. How third parties use data</h2>
-  <p>Trivio uses two third-party services, both operated by Google:</p>
+  <h2>4. Your choices and consent</h2>
   <ul>
-    <li><strong>Google Firebase (Anonymous Auth, Firestore, Analytics, Crashlytics):</strong> provides anonymous identities so community quizzes can be published and ranked, stores published quiz content, and reports anonymized usage and crash data. See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase's privacy notice</a>.</li>
-    <li><strong>Google AdMob:</strong> serves banner, interstitial, and rewarded ads. AdMob may collect device identifiers (IDFA, IP) for ad delivery, fraud prevention, and frequency capping. See <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google's policy</a> and <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob data practices</a>.</li>
+    <li><strong>App Tracking Transparency (iOS):</strong> iOS asks whether Trivio may track you across other companies' apps and websites for advertising. If you allow it, AdMob may serve personalised ads using your advertising identifier. If you choose "Ask App Not to Track", AdMob serves only non-personalised (contextual) ads. The full game stays playable either way. You can change your answer any time in iOS Settings, under Privacy &amp; Security, then Tracking.</li>
+    <li><strong>Ads consent form (GDPR and US privacy options):</strong> where Google's consent SDK determines that a form is required for your region (for example the European Economic Area, the United Kingdom, Switzerland and some US states), the App shows Google's consent form at first launch, and AdMob uses your answer to decide whether ads may be personalised. You can change your choice later from the "Privacy options" row in the App's Settings screen, which appears wherever the form applies.</li>
+    <li><strong>Android ads personalisation:</strong> you can reset your advertising ID or opt out of ads personalisation in Android Settings, under Google, then Ads.</li>
+    <li><strong>Push notifications:</strong> the App asks for permission only after you finish a quiz. You can turn notifications off at any time in your device Settings and none will be shown; to have the stored token itself deleted, email us (see section 6).</li>
+    <li><strong>Photos:</strong> a photo is only read when you pick it yourself through the system photo picker, and it only leaves your device if you publish the quiz that contains it.</li>
   </ul>
-
-  <h2>4. App Tracking Transparency (iOS)</h2>
-  <p>iOS will ask you whether to allow Trivio to track you across other apps and websites for advertising purposes. Your choice is respected:</p>
-  <ul>
-    <li><strong>Allow:</strong> AdMob may serve personalized ads based on your activity in other apps.</li>
-    <li><strong>Ask App Not To Track:</strong> AdMob will only serve non-personalized (contextual) ads. The full game stays completely playable either way.</li>
-  </ul>
-  <p>You can change this any time in iOS Settings, under Privacy &amp; Security, then Tracking.</p>
 
   <h2>5. Children's privacy</h2>
-  <p>Trivio is rated for ages 4+ and is suitable for all audiences. No account or personal data is required to play. We do not knowingly collect personal information from children. If you believe a child has published a quiz or provided any identifiable information, please email <a href="mailto:taoufik.leon.jabbari@gmail.com">taoufik.leon.jabbari@gmail.com</a> and we will remove it.</p>
+  <p>Trivio is rated 4+ on the App Store, but it is not directed at children under 13 and is intended for a general audience. No account or personal information is required to play. We do not knowingly collect personal information from children under 13. If you believe a child has published a quiz, attached a photo or provided any identifiable information, please email <a href="mailto:goloio32@gmail.com">goloio32@gmail.com</a> and we will remove it.</p>
 
   <h2>6. Data retention and deletion</h2>
-  <p>On-device data, including the quizzes you have built but not published, is removed when you uninstall the App. You can delete your own published community quizzes directly inside the App at any time. For deletion of anything else tied to your anonymous ID, email <a href="mailto:taoufik.leon.jabbari@gmail.com">taoufik.leon.jabbari@gmail.com</a> with the display name shown on your device and we will take care of it.</p>
+  <ul>
+    <li><strong>On your device:</strong> game progress, settings and unpublished quizzes are removed when you uninstall the App.</li>
+    <li><strong>Published quizzes:</strong> you can delete your own community quizzes inside the App at any time (open your published quiz in the Community tab and tap Delete). Deleting a quiz also removes any photo it contained. Quizzes you do not delete stay online so other players can keep playing them.</li>
+    <li><strong>Push token:</strong> kept in Firestore under your anonymous user ID until you ask us to delete it. After you uninstall the App the token becomes invalid and no notification can be delivered to it, but the record stays until you ask for deletion.</li>
+    <li><strong>Abuse reports:</strong> kept as long as needed to review the reported quiz.</li>
+    <li><strong>Analytics, crash and advertising data:</strong> held by Google for the retention periods described in the Firebase and AdMob notices linked above; we do not keep separate copies.</li>
+    <li><strong>Everything else tied to your anonymous ID:</strong> email <a href="mailto:goloio32@gmail.com">goloio32@gmail.com</a> with the display name shown in the App and, if possible, the title of a quiz you published, and we will delete your Firestore records (quizzes, reports and push token). Because the ID is anonymous, this is the only way we can find your records.</li>
+  </ul>
 
   <h2>7. International transfers</h2>
-  <p>Firebase and AdMob are operated by Google LLC (USA). Data sent to those services may be stored or processed in the United States. By using Trivio you consent to such transfer where applicable.</p>
+  <p>Firebase and AdMob are operated by Google LLC (USA). Data sent to those services may be stored or processed in the United States and in other countries where Google operates. By using Trivio you consent to such transfer where applicable.</p>
 
   <h2>8. Changes to this policy</h2>
-  <p>We may update this Policy. The "Effective" date above will change when we do. Material changes will be reflected in an updated App Store release.</p>
+  <p>We may update this policy when the App or its services change. The "Effective" date above will change when we do, and material changes will be reflected in an updated App Store or Google Play release and in the App Privacy labels shown on the store listing.</p>
 
   <h2>9. Contact</h2>
-  <p>For privacy questions or deletion requests, contact <a href="mailto:taoufik.leon.jabbari@gmail.com">taoufik.leon.jabbari@gmail.com</a>.</p>
+  <p>For privacy questions or deletion requests, contact <a href="mailto:goloio32@gmail.com">goloio32@gmail.com</a>, or use the "Contact us" row in the App's Settings screen, which opens a pre-addressed email.</p>
 
   <footer>Trivio · © 2026 Taoufik Jabbari · <a href="/trivio/" style="color:var(--leaf)">back to Trivio</a></footer>
 </div>
