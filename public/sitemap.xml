@@ -31,4 +31,8 @@
   <url><loc>https://legal.62-238-17-135.sslip.io/introva/privacy</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://legal.62-238-17-135.sslip.io/introva/terms</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://legal.62-238-17-135.sslip.io/introva/support</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://legal.62-238-17-135.sslip.io/ice-colony</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://legal.62-238-17-135.sslip.io/ice-colony/privacy</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://legal.62-238-17-135.sslip.io/ice-colony/terms</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://legal.62-238-17-135.sslip.io/ice-colony/support</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
 </urlset>
